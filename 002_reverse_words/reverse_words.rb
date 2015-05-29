@@ -3,5 +3,6 @@ def solution1(string)
 end
 
 if __FILE__ == $0
-  puts solution1('How now brown cow')
+  test_string = "How now brown cow"
+  puts solution1(test_string)
 end
