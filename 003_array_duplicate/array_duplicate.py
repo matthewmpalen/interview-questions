@@ -12,10 +12,7 @@ def solution1(array):
     return None
 
 if __name__ == '__main__':
-    test_array = []
-    for i in range(1, 1000001):
-        test_array.append(i)
-
+    test_array = [i for i in range(1, 1000001)]
     test_array[25853] = 4
 
     print(solution1(test_array))
