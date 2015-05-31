@@ -11,8 +11,7 @@ def solution1(array)
 end
 
 if __FILE__ == $0
-  test_array = []
-  (1..1000000).each do |i| test_array << i end
+  test_array = [*1..1000000]
   test_array[25853] = 4
 
   puts solution1(test_array)
