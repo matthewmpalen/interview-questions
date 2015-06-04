@@ -7,4 +7,4 @@ FizzBuzzJava:
 	javac FizzBuzz.java
 
 FizzBuzzGo:
-	go build fizz_buzz.go
+	go build -o fizz_buzz_go fizz_buzz.go
