@@ -21,7 +21,7 @@ class ReverseBinaryTree {
     }
 
     /*
-     * Mutates the original tree
+     * Recursively mutates the original tree
      */
     private static void solution1(Node root) {
         if (null == root) {
@@ -42,7 +42,7 @@ class ReverseBinaryTree {
     }
 
     /*
-     * Creates a new tree
+     * Recursively creates a new tree
      */
     private static Node solution2(Node root) {
         if (null == root) {

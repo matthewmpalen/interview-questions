@@ -13,7 +13,7 @@ class Node
 end
 
 def solution1(root)
-  # Mutates the original tree
+  # Recursively mutates the original tree
   return unless root
 
   tmp = root.left
@@ -25,7 +25,7 @@ def solution1(root)
 end
 
 def solution2(root)
-  # Creates a new tree
+  # Recursively creates a new tree
   return nil unless root
   return Node.new(root.value, solution2(root.right), solution2(root.left))
 end

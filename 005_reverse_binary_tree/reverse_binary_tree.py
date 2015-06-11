@@ -11,7 +11,7 @@ class Node(object):
 
 def solution1(root):
     """
-    Mutates the original tree
+    Recursively mutates the original tree
     """
     if not root:
         return
@@ -28,7 +28,7 @@ def solution1(root):
 
 def solution2(root):
     """
-    Creates a new tree
+    Recursively creates a new tree
     """
     if not root:
         return None
