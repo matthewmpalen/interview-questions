@@ -1,60 +1,37 @@
 class ReverseBinaryTree {
     public static class Node {
-        private int value;
-        private Node left;
-        private Node right;
+        public int value;
+        public Node left;
+        public Node right;
 
         public Node(int v) {
             value = v;
         }
 
-        public int getValue() {
-            return value;
-        }
-
-        public void setValue(int v) {
-            value = v;
-        }
-
-        public Node getLeft() {
-            return left;
-        }
-
-        public void setLeft(Node l) {
-            left = l;
-        }
-
-        public Node getRight() {
-            return right;
-        }
-
-        public void setRight(Node r) {
-            right = r;
-        }
-
         public String toString() {
-            return String.format("Value: %d, Left: %d, Right: %d", value, left.getValue(), right.getValue());
+            return String.format("Value: %d, Left: %d, Right: %d", 
+                value, left.value, right.value);
         }
     }
 
     private static void solution1(Node root) {
-        Node tmp = root.getLeft();
-        root.setLeft(root.getRight());
-        root.setRight(tmp);
+        Node tmp = root.left;
+        root.left = root.right;
+        root.right = tmp;
 
-        if (null != root.getLeft()) {
-            solution1(root.getLeft());
+        if (null != root.left) {
+            solution1(root.left);
         }
 
-        if (null != root.getRight()) {
-            solution1(root.getRight());
+        if (null != root.right) {
+            solution1(root.right);
         }
     }
 
     public static void main(String[] args) {
         Node tree = new Node(1);
-        tree.setLeft(new Node(2));
-        tree.setRight(new Node(3));
+        tree.left = new Node(2);
+        tree.right = new Node(3);
         solution1(tree);
 
         System.out.println(tree.toString());
