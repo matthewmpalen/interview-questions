@@ -6,5 +6,8 @@ For a game of Texas Holdem, create the following:
 2. A function which returns all the combinations of final 5-card hands
 3. Unit tests which validate the count of each previous function 
 
-For reference, the number of permutations is:
-![Permutations](http://upload.wikimedia.org/math/6/b/3/6b32021ba2c95b5da6b5a9edd777c856.png)
+For reference, the number of permutations is
+![Permutations](http://upload.wikimedia.org/math/2/d/b/2dbbe6c257ac6b2afac126e5e7791507.png)
+
+and the number of combinations is
+![Combinations](http://upload.wikimedia.org/math/6/b/3/6b32021ba2c95b5da6b5a9edd777c856.png)
