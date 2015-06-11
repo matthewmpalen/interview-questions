@@ -1,8 +1,8 @@
 class Node(object):
-    def __init__(self, v):
+    def __init__(self, v, l=None, r=None):
         self.value = v
-        self.left = None
-        self.right = None
+        self.left = l
+        self.right = r
 
     def __str__(self):
         return 'Value: %s, Left: %s, Right: %s' % (
