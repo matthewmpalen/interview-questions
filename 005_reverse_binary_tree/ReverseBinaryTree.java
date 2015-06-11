@@ -7,6 +7,12 @@ class ReverseBinaryTree {
         public Node(int v) {
             value = v;
         }
+        
+        public Node(int v, Node l, Node r) {
+            value = v;
+            left = l;
+            right = r;
+        }
 
         public String toString() {
             return String.format("Value: %d, Left: %d, Right: %d", 
@@ -14,7 +20,14 @@ class ReverseBinaryTree {
         }
     }
 
+    /*
+     * Mutates the original tree
+     */
     private static void solution1(Node root) {
+        if (null == root) {
+            return;
+        }
+
         Node tmp = root.left;
         root.left = root.right;
         root.right = tmp;
@@ -28,6 +41,18 @@ class ReverseBinaryTree {
         }
     }
 
+    /*
+     * Creates a new tree
+     */
+    private static Node solution2(Node root) {
+        if (null == root) {
+            return null;
+        }
+
+        return new Node(root.value, solution2(root.right), 
+            solution2(root.left));
+    }
+
     public static void main(String[] args) {
         Node tree = new Node(1);
         tree.left = new Node(2);
@@ -35,5 +60,6 @@ class ReverseBinaryTree {
         solution1(tree);
 
         System.out.println(tree.toString());
+        System.out.println(solution2(tree).toString());
     }
 }
