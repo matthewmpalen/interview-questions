@@ -10,6 +10,12 @@ class Node(object):
         )
 
 def solution1(root):
+    """
+    Mutates the original tree
+    """
+    if not root:
+        return
+
     tmp = root.left
     root.left = root.right
     root.right = tmp
@@ -20,6 +26,15 @@ def solution1(root):
     if root.right:
         solution1(root.right)
 
+def solution2(root):
+    """
+    Creates a new tree
+    """
+    if not root:
+        return None
+
+    return Node(root.value, solution2(root.right), solution2(root.left))
+
 if __name__ == '__main__':
     tree = Node(1)
     tree.left = Node(2)
@@ -27,3 +42,4 @@ if __name__ == '__main__':
     solution1(tree)
 
     print(tree)
+    print(solution2(tree))
