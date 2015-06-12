@@ -29,7 +29,9 @@ public:
         destroyTree();
     };
 
-    Node* root;
+    Node* getRoot() const {
+        return root;
+    }
 
     void destroyTree() {
         destroyTree(root);
@@ -39,6 +41,8 @@ public:
         return root->toString();
     }
 private:
+    Node* root;
+
     void destroyTree(Node* node) {
         if (nullptr != node) {
             destroyTree(node->left);
@@ -74,7 +78,7 @@ int main() {
 
     cout << tree->toString() << endl;
 
-    solution1(tree->root);
+    solution1(tree->getRoot());
     cout << tree->toString() << endl;
 
     delete tree;
