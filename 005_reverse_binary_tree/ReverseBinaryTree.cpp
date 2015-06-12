@@ -61,13 +61,8 @@ void solution1(Node* root) {
     root->left = root->right;
     root->right = tmp;
 
-    if (nullptr != root->left) {
-        solution1(root->left);
-    }
-
-    if (nullptr != root->right) {
-        solution1(root->right);
-    }
+    solution1(root->left);
+    solution1(root->right);
 }
 
 int main() {

@@ -20,11 +20,8 @@ def solution1(root):
     root.left = root.right
     root.right = tmp
 
-    if root.left:
-        solution1(root.left)
-
-    if root.right:
-        solution1(root.right)
+    solution1(root.left)
+    solution1(root.right)
 
 def solution2(root):
     """

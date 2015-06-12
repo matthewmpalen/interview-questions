@@ -32,13 +32,8 @@ class ReverseBinaryTree {
         root.left = root.right;
         root.right = tmp;
 
-        if (null != root.left) {
-            solution1(root.left);
-        }
-
-        if (null != root.right) {
-            solution1(root.right);
-        }
+        solution1(root.left);
+        solution1(root.right);
     }
 
     /*
