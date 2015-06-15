@@ -52,6 +52,9 @@ private:
     }
 };
 
+/*
+ * Recursively mutates the original tree
+ */
 void solution1(Node* root) {
     if (nullptr == root) {
         return;
